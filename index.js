@@ -77,6 +77,7 @@ RaspberryPiInfo.prototype.getUptime = function (callback) {
 	var data = fs.readFileSync("/tmp/uptime.txt", "utf-8");
 	var uptime = data.substring(12, data.indexOf(",", data.indexOf(",", 0)+1));
 		
+	this.log("exec getUptime: " + uptime);	
 	callback(null, uptime);
 };
 
@@ -85,6 +86,7 @@ RaspberryPiInfo.prototype.getAvgLoad = function (callback) {
 	var data = fs.readFileSync("/tmp/uptime.txt", "utf-8");
 	var load = data.substring(data.length - 17);
 		
+	this.log("exec getAvgLoad: " + load);
 	callback(null, load);
 };
 
