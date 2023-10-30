@@ -94,6 +94,8 @@ RaspberryPiInfo.prototype.setUpServices = function () {
 
 	var that = this;
 	var temp;
+
+	this.displayName="RaspberryPi" + "-" + hostname
 	
 	this.infoService = new Service.AccessoryInformation();
 	this.infoService
