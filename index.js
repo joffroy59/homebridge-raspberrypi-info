@@ -102,7 +102,7 @@ RaspberryPiInfo.prototype.setUpServices = function () {
 		.setCharacteristic(Characteristic.SerialNumber, hostname + "-" + this.name)
 		.setCharacteristic(Characteristic.FirmwareRevision, packageFile.version);
 	
-	this.fakeGatoHistoryService = new FakeGatoHistoryService("weather", this, { storage: 'fs' });
+	this.fakeGatoHistoryService = new FakeGatoHistoryService("weather", this, { storage: 'fs', minutes: 0.5 });
 	
 	let uuid1 = UUIDGen.generate(that.name + '-Uptime');
 	info = function (displayName, subtype) {
