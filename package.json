@@ -22,7 +22,7 @@
     "homebridge": ">=0.4.1"
   },
   "dependencies": {
-    "fakegato-history": "^0.5.3",
+    "fakegato-history": "^0.6.4",
     "request": "^2.65.0"
   }
 }
